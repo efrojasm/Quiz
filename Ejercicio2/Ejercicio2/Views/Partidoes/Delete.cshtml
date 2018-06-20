@@ -1,0 +1,51 @@
+﻿@model Ejercicio2.DBModels.Partido
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Partido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Local)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Local)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Visita)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Visita)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Marcador)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marcador)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Idest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Idest)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
