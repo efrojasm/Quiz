@@ -1,0 +1,24 @@
+﻿@model List<Ejercicio3.Models.Materiales>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Nombre
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var mat in Model)
+        {
+            <tr class="danger">
+                <th>
+                    @mat.Nombre
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
